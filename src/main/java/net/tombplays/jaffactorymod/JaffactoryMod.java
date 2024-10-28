@@ -1,7 +1,8 @@
-package net.tombplays.jaffafactorymod;
+package net.tombplays.jaffactorymod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -13,6 +14,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.tombplays.jaffactorymod.item.ModCreativeTabs;
+import net.tombplays.jaffactorymod.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -27,6 +30,14 @@ public class JaffactoryMod
     public JaffactoryMod(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+
+        // Register the CreativeTab
+        ModCreativeTabs.register(modEventBus);
+
+        // Register the items
+        ModItems.register(modEventBus);
+
+        // Register the blocks
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -51,10 +62,10 @@ public class JaffactoryMod
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-    // Add the example block item to the building blocks tab
+    // Add the items to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        event.accept(ModItems.ORANGE);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

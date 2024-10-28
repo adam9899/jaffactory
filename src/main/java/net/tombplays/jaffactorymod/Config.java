@@ -1,4 +1,4 @@
-package net.tombplays.jaffafactorymod;
+package net.tombplays.jaffactorymod;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
