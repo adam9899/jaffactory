@@ -1,6 +1,7 @@
 package app.tombplays.jaffactorymod.item;
 
 import app.tombplays.jaffactorymod.JaffactoryMod;
+import app.tombplays.jaffactorymod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,6 +21,8 @@ public class ModCreativeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ORANGE.get());
                         output.accept(ModItems.ORANGE_JUICE.get());
+
+                        output.accept(ModBlocks.ORANGE_BLOCK.get());
                     })
                     .build());
 

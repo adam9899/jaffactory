@@ -21,7 +21,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, JaffactoryMod.MODID);
 
     public static final RegistryObject<Block> ORANGE_BLOCK = registerBlock("orange_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COMPOSTER)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
