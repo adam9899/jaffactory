@@ -14,11 +14,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class ModBlockStateProvider extends BlockStateProvider {
-    private final PackOutput packOutput;
-
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, JaffactoryMod.MODID, exFileHelper);
-        this.packOutput = output;
     }
 
     @Override
@@ -27,11 +24,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
-        String texturePath = "block/" + blockRegistryObject.getId().getPath();
-        ResourceLocation textureLocation = modLoc(texturePath);
 
-        // Log the texture path
-        System.out.println("Using texture path: " + texturePath);
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 
 }

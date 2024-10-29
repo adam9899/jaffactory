@@ -10,6 +10,10 @@ import net.minecraftforge.registries.RegistryObject;
 import app.tombplays.jaffactorymod.JaffactoryMod;
 import app.tombplays.jaffactorymod.item.ModItems;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, JaffactoryMod.MODID, existingFileHelper);
@@ -22,8 +26,14 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(JaffactoryMod.MODID, "item/" + item.getId().getPath()));
+        String texturePath = "item/" + item.getId().getPath();
+
+        // Log the texture path
+        System.out.println("Using texture path: " + texturePath);
+
+        // Items generally use a simple parent and one texture. The most common parents are item/generated and item/handheld.
+        // In this example, the item texture would be located at assets/jaffactory/textures/item/example_item.png.
+        // If you want a more complex model, you can use getBuilder() and then work from that, like you would with block models.
+        return withExistingParent(item.get().toString(), mcLoc("item/generated")).texture("layer0", texturePath);
     }
 }

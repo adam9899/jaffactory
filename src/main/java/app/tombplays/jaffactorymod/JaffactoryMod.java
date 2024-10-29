@@ -30,14 +30,17 @@ public class JaffactoryMod
     public JaffactoryMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
-        // Register the CreativeTab
-        ModCreativeTabs.register(modEventBus);
-
         // Register the items
         ModItems.register(modEventBus);
 
+        // Register the foods
+
+
         // Register the blocks
         ModBlocks.register(modEventBus);
+
+        // Register the CreativeTab
+        ModCreativeTabs.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
