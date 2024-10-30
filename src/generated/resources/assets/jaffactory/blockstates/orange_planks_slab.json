@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jaffactory:block/orange_planks_slab"
+    },
+    "type=double": {
+      "model": "jaffactory:block/orange_planks_block"
+    },
+    "type=top": {
+      "model": "jaffactory:block/orange_planks_slab_top"
+    }
+  }
+}

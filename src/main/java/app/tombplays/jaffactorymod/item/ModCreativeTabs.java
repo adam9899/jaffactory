@@ -23,7 +23,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.ORANGE_JUICE.get());
 
                         output.accept(ModBlocks.ORANGE_BLOCK.get());
-                        output.accept(ModBlocks.ORANGE_LOG_BLOCK.get());
+//                        output.accept(ModBlocks.ORANGE_LOG_BLOCK.get());
 
                         output.accept(ModBlocks.ORANGE_PLANKS_BLOCK.get());
                         output.accept(ModBlocks.ORANGE_PLANKS_STAIRS.get());

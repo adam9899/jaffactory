@@ -5,8 +5,6 @@ import app.tombplays.jaffactorymod.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -19,14 +17,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         super(output, JaffactoryMod.MODID, exFileHelper);
     }
 
-    public static final BlockSetType ORANGE = BlockSetType.register(new BlockSetType("orange"));
-    public static final WoodType ORANGE_WOOD = register(new WoodType("orange", ORANGE));
-
     @Override
     protected void registerStatesAndModels() {
         blockBarrelWithItem(ModBlocks.ORANGE_BLOCK);
 
-        blockTubeWithItem(ModBlocks.ORANGE_LOG_BLOCK);
+//        blockTubeWithItem(ModBlocks.ORANGE_LOG_BLOCK);
 
         blockWithItem(ModBlocks.ORANGE_PLANKS_BLOCK);
 

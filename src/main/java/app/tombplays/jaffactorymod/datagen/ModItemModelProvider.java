@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import app.tombplays.jaffactorymod.JaffactoryMod;
 import app.tombplays.jaffactorymod.item.ModItems;
@@ -22,8 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ORANGE);
         simpleItem(ModItems.ORANGE_JUICE);
 
-        simpleBlockItem(ModBlocks.ORANGE_PLANKS_DOOR);
-
+        doorItem(ModBlocks.ORANGE_PLANKS_DOOR);
         fenceItem(ModBlocks.ORANGE_PLANKS_FENCE, ModBlocks.ORANGE_PLANKS_BLOCK);
         buttonItem(ModBlocks.ORANGE_PLANKS_BUTTON, ModBlocks.ORANGE_PLANKS_BLOCK);
 
@@ -31,32 +31,46 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
-        String texturePath = prepareTexturePath(item.getId().getPath());
+        String texturePath = prepareTexturePath("item/" + item.getId().getPath());
         return withExistingParent(item.get().toString(), mcLoc("item/generated")).texture("layer0", texturePath);
     }
 
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> block) {
-        String texturePath = prepareTexturePath(block.getId().getPath());
-        return withExistingParent(block.get().toString(), mcLoc("item/generated")).texture("layer0", texturePath);
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        String texturePath = prepareTexturePath(item.getId().getPath());
+        return withExistingParent(item.getId().getPath(), modLoc(texturePath));
+    }
+
+    private ItemModelBuilder simpleDoor(RegistryObject<Block> item) {
+        String texturePath = prepareTexturePath(item.getId().getPath());
+        return withExistingParent(item.getId().getPath(), modLoc(texturePath));
+    }
+
+    public void evenSimplerBlockItem(RegistryObject<Block> block) {
+        this.withExistingParent(JaffactoryMod.MODID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
 
     private static String prepareTexturePath(String path) {
-        String texturePath = "item/" + path;
         // Log the texture path
-        System.out.println("Using texture path: " + texturePath);
-        return texturePath;
+        System.out.println("Using texture path: " + path);
+        return path;
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(block.get().toString(), mcLoc("block/fence_inventory"))
-                .texture("texture", "block/" + block.getId().getPath());
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture", "block/" + baseBlock.getId().getPath());
     }
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(block.get().toString(), mcLoc("block/button_inventory"))
-                .texture("texture", "block/" + block.getId().getPath());
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture", "block/" + baseBlock.getId().getPath());
     }
     public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(block.get().toString(), mcLoc("block/fence_inventory"))
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+                .texture("texture", "block/" + baseBlock.getId().getPath());
+    }
+    public void doorItem(RegistryObject<Block> block) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/door"))
                 .texture("texture", "block/" + block.getId().getPath());
     }
+
 }

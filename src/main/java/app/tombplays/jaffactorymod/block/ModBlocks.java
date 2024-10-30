@@ -24,8 +24,8 @@ public class ModBlocks {
     /* Register the Blocks START */
     public static final RegistryObject<Block> ORANGE_BLOCK = registerBlock("orange_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COMPOSTER)));
-    public static final RegistryObject<Block> ORANGE_LOG_BLOCK = registerBlock("orange_log_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+//    public static final RegistryObject<Block> ORANGE_LOG_BLOCK = registerBlock("orange_log_block",
+//            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> ORANGE_PLANKS_BLOCK = registerBlock("orange_planks_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     /* Register the Blocks END */

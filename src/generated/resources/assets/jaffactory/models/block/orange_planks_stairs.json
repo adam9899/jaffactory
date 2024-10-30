@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "jaffactory:block/orange_planks_block",
+    "side": "jaffactory:block/orange_planks_block",
+    "top": "jaffactory:block/orange_planks_block"
+  }
+}
