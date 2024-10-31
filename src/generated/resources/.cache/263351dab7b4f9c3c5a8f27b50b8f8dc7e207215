@@ -1,0 +1,11 @@
+// 1.20.6	2024-10-31T11:15:36.4748822	Tags for minecraft:block mod id jaffactory
+d0f9cacc23e204526457489aaf277c48c9897291 data/jaffactory/tags/blocks/jaffactory_fruit.json
+d3225a2651b160da03c9a5b2f127a8a44746a25e data/jaffactory/tags/blocks/orange_planks_block.json
+cbc4d17b55e0ea547f1befa06765f6c6acf4a936 data/minecraft/tags/blocks/fence_gates.json
+0f82b91f85291fc87fcc2ed2479c342bafdff032 data/minecraft/tags/blocks/wooden_buttons.json
+62ac24a782dca923eeea6344b7e8a02355c7490b data/minecraft/tags/blocks/wooden_doors.json
+0d9a39a997713681bd0b72f81deab4a28a613181 data/minecraft/tags/blocks/wooden_fences.json
+2ae53b511445e2c873730783dcbe4ba464d58f68 data/minecraft/tags/blocks/wooden_pressure_plates.json
+7061137aa331a4f2863c27f47cbeba32a3370736 data/minecraft/tags/blocks/wooden_slabs.json
+fb972d056f2d4686927a8d640fa037195f904dc4 data/minecraft/tags/blocks/wooden_stairs.json
+dc3583faf0bfcc4dca782cc776f1353d9386ed21 data/minecraft/tags/blocks/wooden_trapdoors.json

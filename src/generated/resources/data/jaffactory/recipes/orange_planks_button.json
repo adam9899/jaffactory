@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "orange",
+  "ingredients": [
+    {
+      "item": "jaffactory:orange_planks_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "jaffactory:orange_planks_button"
+  }
+}

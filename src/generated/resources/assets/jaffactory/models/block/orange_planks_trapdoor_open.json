@@ -2,6 +2,6 @@
   "parent": "minecraft:block/template_orientable_trapdoor_open",
   "render_type": "minecraft:cutout",
   "textures": {
-    "texture": "jaffactory:block/orange_planks_trapdoor_bottom"
+    "texture": "jaffactory:block/orange_planks_trapdoor"
   }
 }

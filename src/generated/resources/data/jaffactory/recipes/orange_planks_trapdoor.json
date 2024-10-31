@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "orange",
+  "key": {
+    "#": {
+      "item": "jaffactory:orange_planks_block"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "jaffactory:orange_planks_trapdoor"
+  }
+}
