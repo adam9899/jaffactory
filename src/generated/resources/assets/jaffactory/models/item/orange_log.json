@@ -1,0 +1,7 @@
+{
+  "parent": "jaffactory:block/orange_log",
+  "textures": {
+    "end": "jaffactory:block/orange_log_top",
+    "side": "jaffactory:block/orange_log_side"
+  }
+}

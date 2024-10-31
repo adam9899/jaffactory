@@ -1,6 +1,13 @@
-// 1.20.6	2024-10-31T11:15:36.4743826	Item Models: jaffactory
+// 1.20.6	2024-10-31T17:16:51.9758872	Item Models: jaffactory
 b366426cab960b2b25bcba9b29e4df91aec581f3 assets/jaffactory/models/item/orange.json
 2bf2a4e21d884d275c5a320e89789dbffb62a4e8 assets/jaffactory/models/item/orange_juice.json
+bfb1469dd5b9b3d8b1c6013fc202281d654b50c9 assets/jaffactory/models/item/orange_log.json
 8fb44af42eaf693c2146557218dffa763ddd9964 assets/jaffactory/models/item/orange_planks_button.json
-8a471bebaaa17f80eeb51d704c7d5b62f4b6b04d assets/jaffactory/models/item/orange_planks_door.json
+18986168b8621629be7cf6bc77bb6aa2176a20ea assets/jaffactory/models/item/orange_planks_door.json
 08acc4194ec3b45cc09eb29dd975f2a2e1dd4f88 assets/jaffactory/models/item/orange_planks_fence.json
+1899667400d9553be68fd777d26aca632fe46bdc assets/jaffactory/models/item/orange_planks_fence_gate.json
+1af255291fc518bb048e7434d975cf9a12f4409a assets/jaffactory/models/item/orange_planks_pressure_plate.json
+cf12821fd744933f2590f92cf893493e4141f43d assets/jaffactory/models/item/orange_planks_slab.json
+5dc7172b3dd72dac7f3a04eb289780f97717e55b assets/jaffactory/models/item/orange_planks_stairs.json
+774f3369c3f34f0ae5b03ed540acbbb77a672a8f assets/jaffactory/models/item/orange_planks_trapdoor.json
+29066a1fe49c3499b37b3eeb5120cfecda210dcc assets/jaffactory/models/item/orange_sapling.json

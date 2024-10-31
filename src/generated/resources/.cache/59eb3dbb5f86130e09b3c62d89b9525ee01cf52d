@@ -1,5 +1,8 @@
-// 1.20.6	2024-10-31T11:15:36.4753826	Loot Tables
+// 1.20.6	2024-10-31T17:16:51.9768866	Loot Tables
 12f4f5315d034d83ae909498975d17f6b3595db9 data/jaffactory/loot_tables/blocks/orange_block.json
+97c19044dbd237cd83415ab103755cd3fddcffa2 data/jaffactory/loot_tables/blocks/orange_fruit_leaves.json
+815fed29f4a78625ef431301e1fcfc2b58d013ae data/jaffactory/loot_tables/blocks/orange_leaves.json
+d91b664644c657875e56e07205ce91e05bcc68fb data/jaffactory/loot_tables/blocks/orange_log.json
 28d4d234a7a4e92ef7a82f14e8b9dd330017ad34 data/jaffactory/loot_tables/blocks/orange_planks_block.json
 5b8892029d3871f27e41b691ec4f7a718fbb31cc data/jaffactory/loot_tables/blocks/orange_planks_button.json
 56a24f8fe14ca6095a8f3289a339e8a76eb172ec data/jaffactory/loot_tables/blocks/orange_planks_door.json
@@ -9,3 +12,7 @@
 4210002356d880d7ce52290c5d36d76c8899a983 data/jaffactory/loot_tables/blocks/orange_planks_slab.json
 5dc333a4f4f710040b2f29948a695affca7e8f29 data/jaffactory/loot_tables/blocks/orange_planks_stairs.json
 2ada9a65f9e917fa92804b35510e9a3b2a07ffbd data/jaffactory/loot_tables/blocks/orange_planks_trapdoor.json
+f9cd3c0dfcca916b68d4c2a22052b42c6f22ed73 data/jaffactory/loot_tables/blocks/orange_sapling.json
+549e572d04c24834f2f183bc87fd3b9cb7079501 data/jaffactory/loot_tables/blocks/orange_wood.json
+2755290463209e1e0d1eb258aafd622260014dab data/jaffactory/loot_tables/blocks/stripped_orange_log.json
+f9ab480420c651aa3e4048d7b91a71b0b0a5247c data/jaffactory/loot_tables/blocks/stripped_orange_wood.json

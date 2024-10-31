@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/oak_trapdoor",
+  "textures": {
+    "texture": "jaffactory:block/orange_planks_trapdoor"
+  }
+}

@@ -1,3 +1,7 @@
 {
-  "parent": "minecraft:item/oak_door"
+  "parent": "minecraft:item/oak_door",
+  "textures": {
+    "bottom": "jaffactory:block/orange_planks_door_bottom",
+    "top": "jaffactory:block/orange_planks_door_top"
+  }
 }

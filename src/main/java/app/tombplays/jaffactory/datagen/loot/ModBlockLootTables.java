@@ -1,8 +1,12 @@
 package app.tombplays.jaffactory.datagen.loot;
 
+import app.tombplays.jaffactory.item.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import app.tombplays.jaffactory.block.ModBlocks;
 
@@ -17,8 +21,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.ORANGE_BLOCK.get());
-//        this.dropSelf(ModBlocks.ORANGE_LOG_BLOCK.get());
+        this.dropSelf(ModBlocks.ORANGE_LOG.get());
+        this.dropSelf(ModBlocks.ORANGE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_ORANGE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_ORANGE_WOOD.get());
         this.dropSelf(ModBlocks.ORANGE_PLANKS_BLOCK.get());
+        this.dropSelf(ModBlocks.ORANGE_SAPLING.get());
+
+        this.add(ModBlocks.ORANGE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.ORANGE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.ORANGE_FRUIT_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.ORANGE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.ORANGE_FRUIT_LEAVES.get(),
+                createSingleItemTable(ModItems.ORANGE.get()));
 
         this.dropSelf(ModBlocks.ORANGE_PLANKS_STAIRS.get());
         this.dropSelf(ModBlocks.ORANGE_PLANKS_BUTTON.get());

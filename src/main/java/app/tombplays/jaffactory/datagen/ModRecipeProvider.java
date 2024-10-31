@@ -30,7 +30,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         /* Get Items from a Block - Category, Item, Block, Count, pRecipeOutput */
         ShapelessGetFromGiveRecipe(RecipeCategory.FOOD, ModItems.ORANGE.get(), ModBlocks.ORANGE_BLOCK.get(), 9, pRecipeOutput);
-//        ShapelessGetFromGiveRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_PLANKS_BLOCK.get(), ModBlocks.ORANGE_LOG_BLOCK.get(), 4, pRecipeOutput);
+        ShapelessGetFromGiveRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_PLANKS_BLOCK.get(), ModBlocks.ORANGE_LOG.get(), 4, pRecipeOutput);
 
         /* Get Block from 9 Items in a square - Category, Block, Item, pRecipeOutput */
         ShapedBlockRecipe(RecipeCategory.DECORATIONS, ModBlocks.ORANGE_BLOCK.get(), ModItems.ORANGE.get(), pRecipeOutput);

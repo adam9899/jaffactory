@@ -1,10 +1,13 @@
 package app.tombplays.jaffactory.block;
 
 import app.tombplays.jaffactory.JaffactoryMod;
+import app.tombplays.jaffactory.block.tree.ModFlammableRotatedPillarBlock;
+import app.tombplays.jaffactory.block.tree.SaplingBlockFactory;
 import app.tombplays.jaffactory.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -24,8 +27,24 @@ public class ModBlocks {
     /* Register the Blocks START */
     public static final RegistryObject<Block> ORANGE_BLOCK = registerBlock("orange_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COMPOSTER)));
-//    public static final RegistryObject<Block> ORANGE_LOG_BLOCK = registerBlock("orange_log_block",
-//            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> ORANGE_LOG = registerBlock("orange_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> ORANGE_WOOD = registerBlock("orange_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_ORANGE_LOG = registerBlock("stripped_orange_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_ORANGE_WOOD = registerBlock("stripped_orange_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).strength(3f)));
+
+    public static final RegistryObject<Block> ORANGE_LEAVES = registerBlock("orange_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> ORANGE_FRUIT_LEAVES = registerBlock("orange_fruit_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+
+    public static final Supplier<SaplingBlock> saplingBlockSupplier = SaplingBlockFactory.createSaplingBlock(TreeGrower.OAK);
+    public static final RegistryObject<SaplingBlock> ORANGE_SAPLING = registerBlock("orange_sapling", saplingBlockSupplier);
+
     public static final RegistryObject<Block> ORANGE_PLANKS_BLOCK = registerBlock("orange_planks_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     /* Register the Blocks END */

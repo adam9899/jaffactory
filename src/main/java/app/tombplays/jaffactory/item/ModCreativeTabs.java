@@ -23,7 +23,14 @@ public class ModCreativeTabs {
                         output.accept(ModItems.ORANGE_JUICE.get());
 
                         output.accept(ModBlocks.ORANGE_BLOCK.get());
-//                        output.accept(ModBlocks.ORANGE_LOG_BLOCK.get());
+                        output.accept(ModBlocks.ORANGE_LOG.get());
+                        output.accept(ModBlocks.ORANGE_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_ORANGE_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_ORANGE_WOOD.get());
+
+                        output.accept(ModBlocks.ORANGE_SAPLING.get());
+                        output.accept(ModBlocks.ORANGE_LEAVES.get());
+                        output.accept(ModBlocks.ORANGE_FRUIT_LEAVES.get());
 
                         output.accept(ModBlocks.ORANGE_PLANKS_BLOCK.get());
                         output.accept(ModBlocks.ORANGE_PLANKS_STAIRS.get());
@@ -36,6 +43,8 @@ public class ModCreativeTabs {
 
                         output.accept(ModBlocks.ORANGE_PLANKS_DOOR.get());
                         output.accept(ModBlocks.ORANGE_PLANKS_TRAPDOOR.get());
+
+
                     })
                     .build());
 

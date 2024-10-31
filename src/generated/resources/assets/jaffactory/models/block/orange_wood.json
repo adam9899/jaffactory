@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "jaffactory:block/orange_log_top",
+    "side": "jaffactory:block/orange_log_side"
+  }
+}

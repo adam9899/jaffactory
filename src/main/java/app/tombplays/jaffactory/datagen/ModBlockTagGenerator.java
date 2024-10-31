@@ -29,10 +29,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_PLANKS_BLOCK.get()
                 )
                 .addTag(BlockTags.PLANKS);
-//        this.tag(ModTags.Blocks.ORANGE_LOG_BLOCK)
-//                .add(ModBlocks.ORANGE_LOG_BLOCK.get()
-//                )
-//                .addTag(BlockTags.LOGS);
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.ORANGE_LOG.get())
+                .add(ModBlocks.ORANGE_WOOD.get())
+                .add(ModBlocks.STRIPPED_ORANGE_LOG.get())
+                .add(ModBlocks.STRIPPED_ORANGE_WOOD.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.ORANGE_PLANKS_BLOCK.get());
 
         this.tag(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.ORANGE_PLANKS_FENCE.get());

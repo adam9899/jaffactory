@@ -1,6 +1,7 @@
 package app.tombplays.jaffactory;
 
 import app.tombplays.jaffactory.block.ModBlocks;
+import app.tombplays.jaffactory.worldgen.ModConfiguredFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
@@ -32,9 +33,6 @@ public class JaffactoryMod
 
         // Register the items
         ModItems.register(modEventBus);
-
-        // Register the foods
-
 
         // Register the blocks
         ModBlocks.register(modEventBus);

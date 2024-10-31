@@ -1,4 +1,5 @@
-// 1.20.6	2024-10-31T11:15:36.4758829	Recipes
+// 1.20.6	2024-10-31T17:16:51.9773863	Recipes
+38e7dfb5b6820bc84edbcfd7753a99429954f254 data/jaffactory/advancements/recipes/building_blocks/orange_planks_block.json
 ed161be2ee05c0a81ea1f868015b5f3aed0a961e data/jaffactory/advancements/recipes/building_blocks/orange_planks_slab.json
 43ded405b0b10883480e441baaca9457a039eff7 data/jaffactory/advancements/recipes/building_blocks/orange_planks_stairs.json
 5faaa64031320b3a6a9cb94acc21c4cb51d9ab3e data/jaffactory/advancements/recipes/decorations/orange_block.json
@@ -13,6 +14,7 @@ c1cbfdf4b7e820751e101f9b26b7a317d8aba72f data/jaffactory/advancements/recipes/re
 64d8e8805248967c9aae51b4302463bf863cf053 data/jaffactory/recipes/orange.json
 ac663ffce2371d41032069a9418caedd3f958aa1 data/jaffactory/recipes/orange_block.json
 d876fbcbfe3e1271b8a8fd330678a2800b2433db data/jaffactory/recipes/orange_juice.json
+eb0ca5268ca3c69d8428f8875fbd6757521bc492 data/jaffactory/recipes/orange_planks_block.json
 b74545ae297d2ad187602278be76ef7251be441e data/jaffactory/recipes/orange_planks_button.json
 8fc8f8e7c693dc50934932e2c6bdf61defa0fa43 data/jaffactory/recipes/orange_planks_door.json
 78ef4f45834f7727a13971084dee15802748d09a data/jaffactory/recipes/orange_planks_fence.json
