@@ -2,7 +2,8 @@ package app.tombplays.jaffactory.block;
 
 import app.tombplays.jaffactory.JaffactoryMod;
 import app.tombplays.jaffactory.block.tree.ModFlammableRotatedPillarBlock;
-import app.tombplays.jaffactory.block.tree.SaplingBlockFactory;
+import app.tombplays.jaffactory.block.tree.OrangeTreeGrower;
+
 import app.tombplays.jaffactory.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -11,6 +12,8 @@ import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -42,8 +45,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> ORANGE_FRUIT_LEAVES = registerBlock("orange_fruit_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
 
-    public static final Supplier<SaplingBlock> saplingBlockSupplier = SaplingBlockFactory.createSaplingBlock(TreeGrower.OAK);
-    public static final RegistryObject<SaplingBlock> ORANGE_SAPLING = registerBlock("orange_sapling", saplingBlockSupplier);
+    //public static final Supplier<SaplingBlock> saplingBlockSupplier = SaplingBlockFactory.createSaplingBlock(TreeGrower.OAK);
+    public static final RegistryObject<SaplingBlock> ORANGE_SAPLING = registerBlock("orange_sapling",
+            () -> new SaplingBlockJaffa(OrangeTreeGrower.JAFFA, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> ORANGE_PLANKS_BLOCK = registerBlock("orange_planks_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
