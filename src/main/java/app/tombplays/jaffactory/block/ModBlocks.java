@@ -45,9 +45,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> ORANGE_FRUIT_LEAVES = registerBlock("orange_fruit_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
 
-    //public static final Supplier<SaplingBlock> saplingBlockSupplier = SaplingBlockFactory.createSaplingBlock(TreeGrower.OAK);
     public static final RegistryObject<SaplingBlock> ORANGE_SAPLING = registerBlock("orange_sapling",
-            () -> new SaplingBlockJaffa(OrangeTreeGrower.JAFFA, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+            () -> new SaplingBlockJaffa(OrangeTreeGrower.JAFFA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> ORANGE_PLANKS_BLOCK = registerBlock("orange_planks_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));

@@ -1,7 +1,7 @@
 package app.tombplays.jaffactory.util.worldgen;
 
 import app.tombplays.jaffactory.JaffactoryMod;
-import app.tombplays.jaffactory.worldgen.feature.JaffaTreeFeatures;
+import app.tombplays.jaffactory.worldgen.feature.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;

@@ -16,8 +16,10 @@ public class JaffaTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> JAFFA_TREE_BEES = JaffaFeatureUtils.createKey("jaffa_tree_bees");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
+
         register(context, JaffaTreeFeatures.JAFFA_TREE, JaffaBaseFeatures.BASIC_TREE, new BasicTreeConfiguration.Builder().trunk(BlockStateProvider.simple(ModBlocks.ORANGE_LOG.get())).foliage(BlockStateProvider.simple(ModBlocks.ORANGE_LEAVES.get())).altFoliage(BlockStateProvider.simple(ModBlocks.ORANGE_FRUIT_LEAVES.get())).build());
         register(context, JaffaTreeFeatures.JAFFA_TREE_BEES, JaffaBaseFeatures.BASIC_TREE, new BasicTreeConfiguration.Builder().trunk(BlockStateProvider.simple(ModBlocks.ORANGE_LOG.get())).foliage(BlockStateProvider.simple(ModBlocks.ORANGE_LEAVES.get())).altFoliage(BlockStateProvider.simple(ModBlocks.ORANGE_FRUIT_LEAVES.get())).decorator(new BeehiveDecorator(0.05f)).build());
+
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> configuredFeatureKey, F feature, FC configuration) {

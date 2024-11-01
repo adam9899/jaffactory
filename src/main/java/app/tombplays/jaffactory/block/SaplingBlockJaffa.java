@@ -1,6 +1,9 @@
 package app.tombplays.jaffactory.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
@@ -15,6 +18,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -40,14 +44,8 @@ public class SaplingBlockJaffa extends SaplingBlock implements BonemealableBlock
     @Override
     public void performBonemeal(ServerLevel world, RandomSource rand, BlockPos pos, BlockState state)
     {
-        if (state.getValue(STAGE) == 0)
-        {
-            world.setBlock(pos, state.cycle(STAGE), 4);
-        }
-        else
-        {
-            this.tree.growTree(world, world.getChunkSource().getGenerator(), pos, state, rand);
-        }
+        System.out.println("Bonemealed Orange Tree");
+        this.advanceTree(world, pos, state, rand);
 
     }
 
@@ -63,13 +61,25 @@ public class SaplingBlockJaffa extends SaplingBlock implements BonemealableBlock
     @Override
     public boolean isBonemealSuccess(Level worldIn, RandomSource rand, BlockPos pos, BlockState state)
     {
-        return (double)worldIn.random.nextFloat() < 0.45D;
+        return (double)worldIn.random.nextFloat() < 0.45;
     }
 
     @Override
     public void advanceTree(ServerLevel world, BlockPos pos, BlockState state, RandomSource rand)
     {
-        this.performBonemeal(world, rand, pos, state);
+        System.out.println("advanceTree");
+        if (state.getValue(STAGE) == 0)
+        {
+            world.setBlock(pos, state.cycle(STAGE), 4);
+        }
+        else
+        {
+            System.out.println("Attempt to grow Orange Tree");
+
+            // Attempt to grow tree
+            Boolean growTreeResult = this.tree.growTree(world, world.getChunkSource().getGenerator(), pos, state, rand);
+            System.out.println("Attempt to grow Orange Tree Successful? " + growTreeResult);
+        }
     }
 
     @Override
