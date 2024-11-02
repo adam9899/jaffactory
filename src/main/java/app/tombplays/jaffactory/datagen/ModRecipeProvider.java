@@ -14,14 +14,15 @@ import app.tombplays.jaffactory.item.ModItems;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public ModRecipeProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pRegistries) {
-        super(pOutput, pRegistries);
+        super(pOutput);
     }
 
     @Override
-    protected void buildRecipes(@NotNull RecipeOutput pRecipeOutput) {
+    protected void buildRecipes(Consumer<FinishedRecipe> pRecipeOutput) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.ORANGE_JUICE.get(), 1)
                 .requires(ModItems.ORANGE.get())
                 .requires(Items.GLASS_BOTTLE)
@@ -47,40 +48,40 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_PLANKS_SLAB.get(), ModBlocks.ORANGE_PLANKS_BLOCK.get());
     }
 
-    private <P> void StairBuilder( Block stairs,P give, String group, RecipeOutput recipeOutput) {
+    private <P> void StairBuilder( Block stairs,P give, String group, Consumer<FinishedRecipe> recipeOutput) {
         stairBuilder(stairs, Ingredient.of( (ItemLike) give)).group(group)
                 .unlockedBy(getHasName((ItemLike) give), has((ItemLike) give)).save(recipeOutput);
     }
-    private <P> void ButtonBuilder(ButtonBlock button, P give, String group, RecipeOutput recipeOutput) {
+    private <P> void ButtonBuilder(ButtonBlock button, P give, String group, Consumer<FinishedRecipe> recipeOutput) {
         buttonBuilder(button, Ingredient.of( (ItemLike) give)).group(group)
                 .unlockedBy(getHasName((ItemLike) give), has((ItemLike) give)).save(recipeOutput);
     }
-    private <P> void FenceBuilder(FenceBlock fence, P give, String group, RecipeOutput recipeOutput) {
+    private <P> void FenceBuilder(FenceBlock fence, P give, String group, Consumer<FinishedRecipe> recipeOutput) {
         fenceBuilder(fence, Ingredient.of( (ItemLike) give)).group(group)
                 .unlockedBy(getHasName((ItemLike) give), has((ItemLike) give)).save(recipeOutput);
     }
-    private <P> void FenceGateBuilder(FenceGateBlock fence, P give, String group, RecipeOutput recipeOutput) {
+    private <P> void FenceGateBuilder(FenceGateBlock fence, P give, String group, Consumer<FinishedRecipe> recipeOutput) {
         fenceBuilder(fence, Ingredient.of( (ItemLike) give)).group(group)
                 .unlockedBy(getHasName((ItemLike) give), has((ItemLike) give)).save(recipeOutput);
     }
-    private <P> void DoorBuilder(DoorBlock door, P give, String group, RecipeOutput recipeOutput) {
+    private <P> void DoorBuilder(DoorBlock door, P give, String group, Consumer<FinishedRecipe> recipeOutput) {
         doorBuilder(door, Ingredient.of( (ItemLike) give)).group(group)
                 .unlockedBy(getHasName((ItemLike) give), has((ItemLike) give)).save(recipeOutput);
     }
-    private <P> void TrapDoorBuilder(TrapDoorBlock door, P give, String group, RecipeOutput recipeOutput) {
+    private <P> void TrapDoorBuilder(TrapDoorBlock door, P give, String group, Consumer<FinishedRecipe> recipeOutput) {
         trapdoorBuilder(door, Ingredient.of( (ItemLike) give)).group(group)
                 .unlockedBy(getHasName((ItemLike) give), has((ItemLike) give)).save(recipeOutput);
     }
 
 
-    private <P> void ShapelessGetFromGiveRecipe(RecipeCategory recipeCategory, P get, P give, int count, RecipeOutput pRecipeOutput) {
+    private <P> void ShapelessGetFromGiveRecipe(RecipeCategory recipeCategory, P get, P give, int count, Consumer<FinishedRecipe> pRecipeOutput) {
         ShapelessRecipeBuilder.shapeless(recipeCategory, (ItemLike) get, count)
                 .requires((ItemLike) give)
                 .unlockedBy(getHasName((ItemLike) give), has((ItemLike) give))
                 .save(pRecipeOutput);
     }
 
-    private void ShapedBlockRecipe(RecipeCategory recipeCategory, Block recipeBlock, Item recipeItem, RecipeOutput recipeOutput) {
+    private void ShapedBlockRecipe(RecipeCategory recipeCategory, Block recipeBlock, Item recipeItem, Consumer<FinishedRecipe> recipeOutput) {
         ShapedRecipeBuilder.shaped(recipeCategory, recipeBlock, 1)
                 .pattern("ooo")
                 .pattern("ooo")
