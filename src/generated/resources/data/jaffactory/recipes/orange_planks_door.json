@@ -14,6 +14,7 @@
   ],
   "result": {
     "count": 3,
-    "id": "jaffactory:orange_planks_door"
-  }
+    "item": "jaffactory:orange_planks_door"
+  },
+  "show_notification": true
 }

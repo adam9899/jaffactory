@@ -16,7 +16,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModBlockTagGenerator extends BlockTagsProvider {
 
     public ModBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, JaffactoryMod.MODID, existingFileHelper);
+        super(output, lookupProvider, JaffactoryMod.MOD_ID, existingFileHelper);
     }
 
     @Override

@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "jaffactory:orange"
+            "items": [
+              "jaffactory:orange"
+            ]
           }
         ]
       },
@@ -20,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_orange"
+      "has_orange",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "jaffactory:orange_juice"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

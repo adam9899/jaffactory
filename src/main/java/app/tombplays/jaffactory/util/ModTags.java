@@ -17,7 +17,7 @@ public class ModTags {
 
 
         private static TagKey<Block> tag(String name) {
-            return BlockTags.create(new ResourceLocation(JaffactoryMod.MODID, name));
+            return BlockTags.create(new ResourceLocation(JaffactoryMod.MOD_ID, name));
         }
     }
 
@@ -26,7 +26,7 @@ public class ModTags {
         public static final TagKey<Item> ORANGE = tag("orange");
 
         private static TagKey<Item> tag(String name) {
-            return ItemTags.create(new ResourceLocation(JaffactoryMod.MODID, name));
+            return ItemTags.create(new ResourceLocation(JaffactoryMod.MOD_ID, name));
         }
     }
 }

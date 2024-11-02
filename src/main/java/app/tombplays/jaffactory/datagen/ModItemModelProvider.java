@@ -11,7 +11,7 @@ import app.tombplays.jaffactory.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, JaffactoryMod.MODID, existingFileHelper);
+        super(output, JaffactoryMod.MOD_ID, existingFileHelper);
     }
 
     @Override

@@ -6,8 +6,10 @@ import net.minecraft.world.food.FoodProperties;
 
 public class ModFoods {
     public static final FoodProperties ORANGE = new FoodProperties.Builder().nutrition(2).fast()
-            .saturationModifier(0.3f).alwaysEdible().effect( new MobEffectInstance(MobEffects.GLOWING, 10), 0.1f).build();
+            .saturationMod(0.3f).alwaysEat().effect(
+                    () -> new MobEffectInstance(MobEffects.GLOWING, 10), 0.1f).build();
 
     public static final FoodProperties ORANGE_JUICE = new FoodProperties.Builder().nutrition(3).fast()
-            .saturationModifier(0.3f).alwaysEdible().effect( new MobEffectInstance(MobEffects.GLOWING, 30), 0.3f).build();
+            .saturationMod(0.3f).alwaysEat().effect(
+                    () -> new MobEffectInstance(MobEffects.GLOWING, 30), 0.3f).build();
 }

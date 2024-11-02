@@ -38,11 +38,11 @@ public class JaffaTreeFeatures {
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(JaffactoryMod.MODID, name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(JaffactoryMod.MOD_ID, name));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> configuredFeatureKey, F feature, FC configuration)
     {
-        context.register(configuredFeatureKey, new ConfiguredFeature<>(feature, configuration), Lifecycle.stable());
+        context.register(configuredFeatureKey, new ConfiguredFeature<>(feature, configuration));
     }
 }

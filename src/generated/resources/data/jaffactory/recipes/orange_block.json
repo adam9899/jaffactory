@@ -12,7 +12,7 @@
     "ooo"
   ],
   "result": {
-    "count": 1,
-    "id": "jaffactory:orange_block"
-  }
+    "item": "jaffactory:orange_block"
+  },
+  "show_notification": true
 }

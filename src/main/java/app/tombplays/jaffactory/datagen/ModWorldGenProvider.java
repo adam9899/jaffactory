@@ -17,6 +17,6 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.CONFIGURED_FEATURE, JaffaTreeFeatures::bootstrap);
 
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(JaffactoryMod.MODID));
+        super(output, registries, BUILDER, Set.of(JaffactoryMod.MOD_ID));
     }
 }

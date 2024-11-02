@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, JaffactoryMod.MODID, exFileHelper);
+        super(output, JaffactoryMod.MOD_ID, exFileHelper);
     }
 
     @Override
@@ -106,7 +106,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void simpleBlockItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(JaffactoryMod.MODID +
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(JaffactoryMod.MOD_ID +
                 ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 

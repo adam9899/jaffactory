@@ -14,6 +14,7 @@
   ],
   "result": {
     "count": 4,
-    "id": "jaffactory:orange_planks_stairs"
-  }
+    "item": "jaffactory:orange_planks_stairs"
+  },
+  "show_notification": true
 }

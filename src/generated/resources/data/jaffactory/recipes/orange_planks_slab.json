@@ -11,6 +11,7 @@
   ],
   "result": {
     "count": 6,
-    "id": "jaffactory:orange_planks_slab"
-  }
+    "item": "jaffactory:orange_planks_slab"
+  },
+  "show_notification": true
 }

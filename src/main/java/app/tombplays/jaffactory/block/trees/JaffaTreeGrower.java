@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 public class JaffaTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
-    protected ResourceKey<ConfiguredFeature<?, ?>> m_213888_(RandomSource pRandom, boolean pHasFlowers) {
+    protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
         return JaffaTreeFeatures.JAFFA_TREE_KEY;
     }
 }
