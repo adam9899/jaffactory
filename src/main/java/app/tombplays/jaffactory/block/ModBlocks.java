@@ -1,19 +1,16 @@
 package app.tombplays.jaffactory.block;
 
 import app.tombplays.jaffactory.JaffactoryMod;
-import app.tombplays.jaffactory.block.tree.ModFlammableRotatedPillarBlock;
-import app.tombplays.jaffactory.block.tree.OrangeTreeGrower;
+import app.tombplays.jaffactory.block.trees.ModFlammableRotatedPillarBlock;
+import app.tombplays.jaffactory.block.trees.OrangeTreeGrower;
 
 import app.tombplays.jaffactory.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -41,23 +38,23 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).strength(3f)));
 
     public static final RegistryObject<Block> ORANGE_LEAVES = registerBlock("orange_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> ORANGE_FRUIT_LEAVES = registerBlock("orange_fruit_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     public static final RegistryObject<SaplingBlock> ORANGE_SAPLING = registerBlock("orange_sapling",
-            () -> new SaplingBlockJaffa(OrangeTreeGrower.JAFFA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+            () -> new SaplingBlockJaffa(new OrangeTreeGrower(), BlockBehaviour.Properties.m_60926_(Blocks.OAK_SAPLING).mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> ORANGE_PLANKS_BLOCK = registerBlock("orange_planks_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+            () -> new Block(BlockBehaviour.Properties.m_60926_(Blocks.OAK_PLANKS)));
     /* Register the Blocks END */
 
     /* Register the Decorations START */
     public static final RegistryObject<StairBlock> ORANGE_PLANKS_STAIRS = registerBlock("orange_planks_stairs",
             () -> new StairBlock( ModBlocks.ORANGE_PLANKS_BLOCK.get().defaultBlockState(),
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+                    BlockBehaviour.Properties.m_60926_(Blocks.OAK_PLANKS)));
     public static final RegistryObject<SlabBlock> ORANGE_PLANKS_SLAB = registerBlock("orange_planks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     public static final RegistryObject<ButtonBlock> ORANGE_PLANKS_BUTTON = registerBlock("orange_planks_button",
             () -> new ButtonBlock(BlockSetType.OAK, 300, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON)));

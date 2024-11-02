@@ -1,4 +1,4 @@
-package app.tombplays.jaffactory.block.tree;
+package app.tombplays.jaffactory.block.trees;
 
 import app.tombplays.jaffactory.block.ModBlocks;
 import net.minecraft.core.BlockPos;

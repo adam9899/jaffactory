@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.grower.TreeGrower;
+import net.minecraft.world.level.block.grower.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -26,11 +26,11 @@ public class SaplingBlockJaffa extends SaplingBlock implements BonemealableBlock
 {
     public static final IntegerProperty STAGE = BlockStateProperties.STAGE;
     public static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
-    private final TreeGrower tree;
+    private final JaffaTreeGrower tree;
 
-    public SaplingBlockJaffa(TreeGrower tree, Block.Properties properties)
+    public SaplingBlockJaffa(JaffaTreeGrower tree, Block.Properties properties)
     {
-        super(tree, properties);
+        super((AbstractTreeGrower)tree, properties);
         this.tree = tree;
         this.registerDefaultState(this.stateDefinition.any().setValue(STAGE, Integer.valueOf(0)));
     }
@@ -77,7 +77,7 @@ public class SaplingBlockJaffa extends SaplingBlock implements BonemealableBlock
             System.out.println("Attempt to grow Orange Tree");
 
             // Attempt to grow tree
-            Boolean growTreeResult = this.tree.growTree(world, world.getChunkSource().getGenerator(), pos, state, rand);
+            Boolean growTreeResult = ((AbstractTreeGrower) this.tree).growTree(world, world.getChunkSource().getGenerator(), pos, state, rand);
             System.out.println("Attempt to grow Orange Tree Successful? " + growTreeResult);
         }
     }
