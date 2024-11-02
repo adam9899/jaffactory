@@ -2,39 +2,44 @@ package app.tombplays.jaffactory.worldgen.feature;
 
 import app.tombplays.jaffactory.JaffactoryMod;
 import app.tombplays.jaffactory.block.ModBlocks;
-import com.mojang.serialization.Lifecycle;
+import app.tombplays.jaffactory.worldgen.feature.configurations.JaffaTreeConfiguration;
+import app.tombplays.jaffactory.worldgen.feature.tree.JAFTreeFeature;
+import app.tombplays.jaffactory.worldgen.feature.tree.JaffaTreeFeature;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.treedecorators.BeehiveDecorator;
+
+import java.util.function.BiConsumer;
 
 public class JaffaTreeFeatures {
+
+    public static JAFTreeFeature<JaffaTreeConfiguration> JAFFA_TREE;
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> JAFFA_TREE_KEY = registerKey("jaffa_tree");
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> JAFFA_TREE_BEES = registerKey("jaffa_tree_bees");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
-        register(context, JAFFA_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.ORANGE_LOG.get()),
-                new StraightTrunkPlacer(5 , 4 ,3),
+        register(context, JAFFA_TREE_KEY, JAFFA_TREE, new JaffaTreeConfiguration.Builder()
+                        .trunk(BlockStateProvider.simple(ModBlocks.ORANGE_LOG.get()))
+                .foliage(BlockStateProvider.simple(ModBlocks.ORANGE_LEAVES.get()))
+                        .altFoliage(BlockStateProvider.simple(ModBlocks.ORANGE_FRUIT_LEAVES.get()))
+                        .minHeight(2).maxHeight(3)
+                        .decorator( new BeehiveDecorator(0.05f))
+                        .leafLayers(3)
+                        .leavesOffset(3)
+                        .maxLeavesRadius(2)
+                        .leavesLayerHeight(3).build());
 
-                BlockStateProvider.simple(ModBlocks.ORANGE_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
+    }
 
-                new TwoLayersFeatureSize(1, 0 ,2)).build());
-                //altFoliage(BlockStateProvider.simple(ModBlocks.ORANGE_FRUIT_LEAVES.get())).build());
-
-        //register(context, JAFFA_TREE_BEES, Feature.TREE, new TreeCo.Builder().trunk(BlockStateProvider.simple(ModBlocks.ORANGE_LOG.get())).foliage(BlockStateProvider.simple(ModBlocks.ORANGE_LEAVES.get())).altFoliage(BlockStateProvider.simple(ModBlocks.ORANGE_FRUIT_LEAVES.get())).decorator(new BeehiveDecorator(0.05f)).build());
-
+    public static void registerFeatures(BiConsumer<ResourceLocation, Feature<?>> func) {
+        JAFFA_TREE = register(func, "basic_tree", new JaffaTreeFeature(JaffaTreeConfiguration.CODEC));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

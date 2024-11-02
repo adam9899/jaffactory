@@ -1,6 +1,7 @@
 package app.tombplays.jaffactory;
 
 import app.tombplays.jaffactory.block.ModBlocks;
+import app.tombplays.jaffactory.worldgen.feature.placement.JaffaFoliagePlacers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Sheets;
@@ -40,6 +41,9 @@ public class JaffactoryMod
         // Register the CreativeTab
         ModCreativeTabs.register(modEventBus);
 
+        // Register the CreativeTab
+        JaffaFoliagePlacers.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -52,6 +56,7 @@ public class JaffactoryMod
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         //context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
+
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         // Some common setup code
