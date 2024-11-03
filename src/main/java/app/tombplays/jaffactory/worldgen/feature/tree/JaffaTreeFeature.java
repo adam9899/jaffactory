@@ -4,7 +4,7 @@ import app.tombplays.jaffactory.worldgen.feature.configurations.JaffaTreeConfigu
 import com.mojang.serialization.Codec;
 
 public class JaffaTreeFeature extends JAFTreeFeature<JaffaTreeConfiguration>{
-    protected JaffaTreeFeature(Codec<JaffaTreeConfiguration> codec) {
+    public JaffaTreeFeature(Codec<JaffaTreeConfiguration> codec) {
         super(codec);
     }
 }

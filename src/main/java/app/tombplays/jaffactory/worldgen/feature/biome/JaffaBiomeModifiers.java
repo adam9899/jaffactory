@@ -16,13 +16,19 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class JaffaBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_JAFFA = registerKey("add_tree_jaffa");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_JAFFA_SAVANNA = registerKey("add_tree_jaffa_savanna");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_TREE_JAFFA, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_DRY),
+//        context.register(ADD_TREE_JAFFA, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+//                biomes.getOrThrow(Tags.Biomes.IS_DRY),
+//                HolderSet.direct(placedFeatures.getOrThrow(JaffaPlacedFeatures.JAFFA_TREE_PLACED_KEY)),
+//                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_JAFFA_SAVANNA, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_SAVANNA),
                 HolderSet.direct(placedFeatures.getOrThrow(JaffaPlacedFeatures.JAFFA_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     }

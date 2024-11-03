@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "jaffactory:jaffa_base"
+    },
+    {
+      "item": "jaffactory:jaffa_slime"
+    }
+  ],
+  "result": {
+    "item": "jaffactory:jaffa_slime_base"
+  }
+}

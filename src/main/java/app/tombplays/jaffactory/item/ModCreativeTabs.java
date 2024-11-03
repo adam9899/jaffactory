@@ -21,6 +21,11 @@ public class ModCreativeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ORANGE.get());
                         output.accept(ModItems.ORANGE_JUICE.get());
+                        output.accept(ModItems.JAFFA_BASE.get());
+                        output.accept(ModItems.JAFFA_CHOCOLATE.get());
+                        output.accept(ModItems.JAFFA_SLIME.get());
+                        output.accept(ModItems.JAFFA_SLIME_BASE.get());
+                        output.accept(ModItems.JAFFA_CAKE.get());
 
                         output.accept(ModBlocks.ORANGE_BLOCK.get());
                         output.accept(ModBlocks.ORANGE_LOG.get());

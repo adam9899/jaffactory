@@ -23,10 +23,54 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pRecipeOutput) {
+
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.ORANGE_JUICE.get(), 1)
                 .requires(ModItems.ORANGE.get())
                 .requires(Items.GLASS_BOTTLE)
                 .unlockedBy(getHasName(ModItems.ORANGE.get()), has(ModItems.ORANGE.get()))
+                .save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.JAFFA_BASE.get(), 1)
+                .requires(Items.WHEAT)
+                .requires(Items.SUGAR)
+                .requires(Items.EGG)
+                .requires(Items.MILK_BUCKET)
+                .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
+                .save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.JAFFA_SLIME_BASE.get(), 1)
+                .requires(ModItems.JAFFA_BASE.get())
+                .requires(ModItems.JAFFA_SLIME.get())
+                .unlockedBy(getHasName(ModItems.JAFFA_SLIME.get()), has(ModItems.JAFFA_SLIME.get()))
+                .save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.JAFFA_CAKE.get(), 1)
+                .requires(ModItems.JAFFA_SLIME_BASE.get())
+                .requires(ModItems.JAFFA_CHOCOLATE.get())
+                .unlockedBy(getHasName(ModItems.JAFFA_SLIME_BASE.get()), has(ModItems.JAFFA_SLIME_BASE.get()))
+                .save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.JAFFA_SLIME.get(), 1)
+                .requires(Items.SLIME_BALL)
+                .requires(ModItems.ORANGE_JUICE.get())
+                .unlockedBy(getHasName(ModItems.ORANGE_JUICE.get()), has(ModItems.ORANGE_JUICE.get()))
+                .save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.JAFFA_CHOCOLATE.get(), 1)
+                .requires(Items.MILK_BUCKET)
+                .requires(Items.COCOA_BEANS)
+                .requires(Items.COCOA_BEANS)
+                .requires(Items.COCOA_BEANS)
+                .unlockedBy(getHasName(Items.COCOA_BEANS), has(Items.COCOA_BEANS))
+                .save(pRecipeOutput);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4)
+                .pattern("o  ")
+                .pattern("o  ")
+                .define('o', ModBlocks.ORANGE_PLANKS_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS_BLOCK.get()), has(ModBlocks.ORANGE_PLANKS_BLOCK.get()))
                 .save(pRecipeOutput);
 
         /* Get Items from a Block - Category, Item, Block, Count, pRecipeOutput */

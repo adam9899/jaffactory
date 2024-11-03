@@ -18,6 +18,11 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.ORANGE.get());
         basicItem(ModItems.ORANGE_JUICE.get());
+        basicItem(ModItems.JAFFA_BASE.get());
+        basicItem(ModItems.JAFFA_SLIME.get());
+        basicItem(ModItems.JAFFA_SLIME_BASE.get());
+        basicItem(ModItems.JAFFA_CAKE.get());
+        basicItem(ModItems.JAFFA_CHOCOLATE.get());
 
         doorItem(ModBlocks.ORANGE_PLANKS_DOOR);
         trapDoorItem(ModBlocks.ORANGE_PLANKS_TRAPDOOR);

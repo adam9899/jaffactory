@@ -1,4 +1,9 @@
-// 1.20.1	2024-11-02T15:56:33.4561593	Item Models: jaffactory
+// 1.20.1	2024-11-03T08:01:16.5491204	Item Models: jaffactory
+dc0935ee95adb9281b5a259eb2f6b5fc792227d5 assets/jaffactory/models/item/jaffa_base.json
+dbd36c76ae28588f573365fc23594acb35767ba4 assets/jaffactory/models/item/jaffa_cake.json
+b2005053d5fa8200253919559acd3dee5f08f0bf assets/jaffactory/models/item/jaffa_chocolate.json
+b2dbdc9353d1600110cae94f4b3ca030b4c61373 assets/jaffactory/models/item/jaffa_slime.json
+de824a9b334ad5c525f1a3e91dc3a0bf5259d627 assets/jaffactory/models/item/jaffa_slime_base.json
 b366426cab960b2b25bcba9b29e4df91aec581f3 assets/jaffactory/models/item/orange.json
 2bf2a4e21d884d275c5a320e89789dbffb62a4e8 assets/jaffactory/models/item/orange_juice.json
 bfb1469dd5b9b3d8b1c6013fc202281d654b50c9 assets/jaffactory/models/item/orange_log.json

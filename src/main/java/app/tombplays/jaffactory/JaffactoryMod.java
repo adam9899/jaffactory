@@ -1,6 +1,7 @@
 package app.tombplays.jaffactory;
 
 import app.tombplays.jaffactory.block.ModBlocks;
+import app.tombplays.jaffactory.worldgen.feature.JaffaTreeFeatures;
 import app.tombplays.jaffactory.worldgen.feature.placement.JaffaFoliagePlacers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -41,7 +42,7 @@ public class JaffactoryMod
         // Register the CreativeTab
         ModCreativeTabs.register(modEventBus);
 
-        // Register the CreativeTab
+        // Register the FoliagePlacers
         JaffaFoliagePlacers.register(modEventBus);
 
         // Register the commonSetup method for modloading

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_jaffa_slime": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jaffactory:jaffa_slime"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jaffactory:jaffa_slime_base"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_jaffa_slime",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jaffactory:jaffa_slime_base"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -2,6 +2,11 @@
   "creativetab.jaffactory_tab": "Jaffactory",
   "item.jaffactory.orange": "Jaffa Orange",
   "item.jaffactory.orange_juice": "Jaffa Juice",
+  "item.jaffactory.jaffa_base": "Jaffa Cake Base",
+  "item.jaffactory.jaffa_slime_base": "Jaffa Cake Base with Jelly",
+  "item.jaffactory.jaffa_cake": "Jaffa Cake",
+  "item.jaffactory.jaffa_slime": "Jaffa Jelly",
+  "item.jaffactory.chocolate_milk": "Chocolate",
 
   "block.jaffactory.orange_block": "Basket of Jaffa Oranges",
   "block.jaffactory.orange_log": "Jaffa Log",
