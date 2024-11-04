@@ -1,4 +1,4 @@
-// 1.20.1	2024-11-03T08:58:09.9000031	Recipes
+// 1.20.1	2024-11-04T12:50:01.4943117	Recipes
 dc926f972b099d12de9995f5d6603f7c15f6e831 data/jaffactory/advancements/recipes/building_blocks/orange_planks_block.json
 0ad71d890e815aabea8408b59bcce2ffa9019288 data/jaffactory/advancements/recipes/building_blocks/orange_planks_slab.json
 97d4e3cfff6d23218ab11ffcf6a7f808f91d64c0 data/jaffactory/advancements/recipes/building_blocks/orange_planks_stairs.json
@@ -33,5 +33,3 @@ a05ab7d9fc54488ef1c5278df9a4ff0effecc289 data/jaffactory/recipes/orange_planks_b
 270d0022fb8939847ba8135d87ff4acb5b8abf9d data/jaffactory/recipes/orange_planks_slab.json
 934323e9e4f5c48f961bb2c3d2d1d3e37b1fdbfe data/jaffactory/recipes/orange_planks_stairs.json
 39f669f92bf296dd429c17afb3de75d667d11547 data/jaffactory/recipes/orange_planks_trapdoor.json
-b2b98e9e0eae2d40bc08b0ae24d9e3738c5a9f9a data/minecraft/advancements/recipes/misc/stick.json
-0e21133a8bb9c89b263ac61fd3b1dde6ea090ce1 data/minecraft/recipes/stick.json

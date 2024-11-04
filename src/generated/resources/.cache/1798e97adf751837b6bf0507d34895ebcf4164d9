@@ -1,3 +1,15 @@
-// 1.20.1	2024-11-02T15:56:33.4581592	Tags for minecraft:item mod id jaffactory
+// 1.20.1	2024-11-04T13:21:34.2555759	Tags for minecraft:item mod id jaffactory
 4bc4f9aab74c28a682a630ab3b3497546cfe50bf data/jaffactory/tags/items/jaffactory_fruit.json
 4bc4f9aab74c28a682a630ab3b3497546cfe50bf data/jaffactory/tags/items/orange.json
+cbc4d17b55e0ea547f1befa06765f6c6acf4a936 data/minecraft/tags/items/fence_gates.json
+f88056cc3399d36359c3ebd6548ea9a3ebba9535 data/minecraft/tags/items/logs.json
+f88056cc3399d36359c3ebd6548ea9a3ebba9535 data/minecraft/tags/items/logs_that_burn.json
+71d0627509f6df066d4e61a0c6b540f51176a472 data/minecraft/tags/items/planks.json
+7061137aa331a4f2863c27f47cbeba32a3370736 data/minecraft/tags/items/slabs.json
+0f82b91f85291fc87fcc2ed2479c342bafdff032 data/minecraft/tags/items/wooden_buttons.json
+62ac24a782dca923eeea6344b7e8a02355c7490b data/minecraft/tags/items/wooden_doors.json
+0d9a39a997713681bd0b72f81deab4a28a613181 data/minecraft/tags/items/wooden_fences.json
+2ae53b511445e2c873730783dcbe4ba464d58f68 data/minecraft/tags/items/wooden_pressure_plates.json
+9f605e910402ecc7fb483bb84b1e11bd4fce4e79 data/minecraft/tags/items/wooden_slabs.json
+fb972d056f2d4686927a8d640fa037195f904dc4 data/minecraft/tags/items/wooden_stairs.json
+dc3583faf0bfcc4dca782cc776f1353d9386ed21 data/minecraft/tags/items/wooden_trapdoors.json

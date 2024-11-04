@@ -66,12 +66,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pRecipeOutput);
 
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4)
-                .pattern("o  ")
-                .pattern("o  ")
-                .define('o', ModBlocks.ORANGE_PLANKS_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS_BLOCK.get()), has(ModBlocks.ORANGE_PLANKS_BLOCK.get()))
-                .save(pRecipeOutput);
+//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4)
+//                .pattern("o  ")
+//                .pattern("o  ")
+//                .define('o', ModBlocks.ORANGE_PLANKS_BLOCK.get())
+//                .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS_BLOCK.get()), has(ModBlocks.ORANGE_PLANKS_BLOCK.get()))
+//                .save(pRecipeOutput);
 
         /* Get Items from a Block - Category, Item, Block, Count, pRecipeOutput */
         ShapelessGetFromGiveRecipe(RecipeCategory.FOOD, ModItems.ORANGE.get(), ModBlocks.ORANGE_BLOCK.get(), 9, pRecipeOutput);

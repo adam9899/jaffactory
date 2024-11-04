@@ -21,23 +21,22 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(ModTags.Blocks.JAFFACTORY_FRUIT)
-                .add(ModBlocks.ORANGE_BLOCK.get()
-                )
-                .addTag(Tags.Blocks.STORAGE_BLOCKS);
-        this.tag(ModTags.Blocks.ORANGE_PLANKS_BLOCK)
-                .add(ModBlocks.ORANGE_PLANKS_BLOCK.get()
-                )
-                .addTag(BlockTags.PLANKS);
-        this.tag(BlockTags.LOGS_THAT_BURN)
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.ORANGE_PLANKS_BLOCK.get());
+
+        this.tag(BlockTags.LOGS)
                 .add(ModBlocks.ORANGE_LOG.get())
                 .add(ModBlocks.ORANGE_WOOD.get())
                 .add(ModBlocks.STRIPPED_ORANGE_LOG.get())
                 .add(ModBlocks.STRIPPED_ORANGE_WOOD.get());
 
-        this.tag(BlockTags.PLANKS)
-                .add(ModBlocks.ORANGE_PLANKS_BLOCK.get());
 
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.ORANGE_LOG.get())
+                .add(ModBlocks.ORANGE_WOOD.get())
+                .add(ModBlocks.STRIPPED_ORANGE_LOG.get())
+                .add(ModBlocks.STRIPPED_ORANGE_WOOD.get());
         this.tag(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.ORANGE_PLANKS_FENCE.get());
         this.tag(BlockTags.WOODEN_DOORS)
@@ -54,5 +53,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_PLANKS_STAIRS.get());
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.ORANGE_PLANKS_FENCE_GATE.get());
+
+        this.tag(ModTags.Blocks.JAFFACTORY_FRUIT)
+                .add(ModBlocks.ORANGE_BLOCK.get()
+                )
+                .addTag(Tags.Blocks.STORAGE_BLOCKS);
+        this.tag(ModTags.Blocks.ORANGE_PLANKS_BLOCK)
+                .add(ModBlocks.ORANGE_PLANKS_BLOCK.get()
+                )
+                .addTag(BlockTags.PLANKS);
+
     }
 }

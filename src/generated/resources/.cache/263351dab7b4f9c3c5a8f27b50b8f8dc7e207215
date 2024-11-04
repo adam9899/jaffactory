@@ -1,7 +1,8 @@
-// 1.20.1	2024-11-02T15:56:33.4566598	Tags for minecraft:block mod id jaffactory
+// 1.20.1	2024-11-04T13:21:34.2540756	Tags for minecraft:block mod id jaffactory
 d0f9cacc23e204526457489aaf277c48c9897291 data/jaffactory/tags/blocks/jaffactory_fruit.json
 d3225a2651b160da03c9a5b2f127a8a44746a25e data/jaffactory/tags/blocks/orange_planks_block.json
 cbc4d17b55e0ea547f1befa06765f6c6acf4a936 data/minecraft/tags/blocks/fence_gates.json
+bccb0b3927e1df41399eaea09ea6ada40f7b7ca3 data/minecraft/tags/blocks/logs.json
 bccb0b3927e1df41399eaea09ea6ada40f7b7ca3 data/minecraft/tags/blocks/logs_that_burn.json
 71d0627509f6df066d4e61a0c6b540f51176a472 data/minecraft/tags/blocks/planks.json
 0f82b91f85291fc87fcc2ed2479c342bafdff032 data/minecraft/tags/blocks/wooden_buttons.json
