@@ -5,6 +5,7 @@ import app.tombplays.jaffactory.block.trees.JaffaTreeGrower;
 import app.tombplays.jaffactory.block.trees.ModFlammableRotatedPillarBlock;
 
 import app.tombplays.jaffactory.item.ModItems;
+import app.tombplays.jaffactory.fluid.ModFluids;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -73,6 +74,9 @@ public class ModBlocks {
     public static final RegistryObject<TrapDoorBlock> ORANGE_PLANKS_TRAPDOOR = registerBlock("orange_planks_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
     /* Register the Decorations END */
+
+    public static final RegistryObject<LiquidBlock> ORANGE_JUICE_BLOCK = BLOCKS.register("orange_juice_block",
+            () -> new LiquidBlock(ModFluids.ORANGE_JUICE_SOURCE, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

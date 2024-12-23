@@ -1,6 +1,8 @@
 package app.tombplays.jaffactory;
 
 import app.tombplays.jaffactory.block.ModBlocks;
+import app.tombplays.jaffactory.fluid.ModFluids;
+import app.tombplays.jaffactory.fluid.ModFluidTypes;
 import app.tombplays.jaffactory.worldgen.feature.JaffaTreeFeatures;
 import app.tombplays.jaffactory.worldgen.feature.placement.JaffaFoliagePlacers;
 import com.mojang.logging.LogUtils;
@@ -17,6 +19,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import app.tombplays.jaffactory.item.ModCreativeTabs;
 import app.tombplays.jaffactory.item.ModItems;
 import org.slf4j.Logger;
@@ -38,6 +42,10 @@ public class JaffactoryMod
 
         // Register the blocks
         ModBlocks.register(modEventBus);
+
+        // Register fluids
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
 
         // Register the CreativeTab
         ModCreativeTabs.register(modEventBus);
@@ -86,6 +94,9 @@ public class JaffactoryMod
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.ORANGE_JUICE_SOURCE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.ORANGE_JUICE_FLOWING.get(), RenderType.translucent());
         }
     }
 }
