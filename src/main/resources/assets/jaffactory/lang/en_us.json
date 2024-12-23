@@ -25,5 +25,7 @@
   "block.jaffactory.orange_planks_fence": "Jaffa Fence",
   "block.jaffactory.orange_planks_fence_gate": "Jaffa Fence Gate",
   "block.jaffactory.orange_planks_door": "Jaffa Door",
-  "block.jaffactory.orange_planks_trapdoor": "Jaffa Trapdoor"
+  "block.jaffactory.orange_planks_trapdoor": "Jaffa Trapdoor",
+
+  "fluid_type.jaffactory.orange_juice_fluid": "Orange Juice"
 }
