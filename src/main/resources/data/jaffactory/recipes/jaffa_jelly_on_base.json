@@ -1,0 +1,17 @@
+{
+    "type": "create:deploying",
+    "ingredients": [
+      {
+        "item": "jaffactory:jaffa_base"
+      },
+      {
+        "item": "jaffactory:jaffa_slime"
+      }
+    ],
+    "results": [
+      {
+        "item": "jaffactory:jaffa_slime_base"
+      }
+    ]
+  }
+  

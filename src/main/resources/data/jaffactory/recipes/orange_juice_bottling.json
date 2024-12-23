@@ -1,0 +1,18 @@
+{
+    "type": "create:filling",
+    "ingredients": [
+      {
+        "item": "minecraft:glass_bottle"
+      },
+      {
+        "fluid": "jaffactory:orange_juice_fluid",
+        "nbt": {},
+        "amount": 250
+      }
+    ],
+    "results": [
+      {
+        "item": "jaffactory:orange_juice"
+      }
+    ]
+  }
