@@ -105,7 +105,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName((ItemLike) give), has((ItemLike) give)).save(recipeOutput);
     }
     private <P> void FenceGateBuilder(FenceGateBlock fence, P give, String group, Consumer<FinishedRecipe> recipeOutput) {
-        fenceBuilder(fence, Ingredient.of( (ItemLike) give)).group(group)
+        fenceGateBuilder(fence, Ingredient.of( (ItemLike) give)).group(group)
                 .unlockedBy(getHasName((ItemLike) give), has((ItemLike) give)).save(recipeOutput);
     }
     private <P> void DoorBuilder(DoorBlock door, P give, String group, Consumer<FinishedRecipe> recipeOutput) {
