@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-05T09:49:09.7420253	Recipes
+// 1.20.1	2025-01-05T10:08:57.0245048	Recipes
 dc926f972b099d12de9995f5d6603f7c15f6e831 data/jaffactory/advancements/recipes/building_blocks/orange_planks_block.json
 0ad71d890e815aabea8408b59bcce2ffa9019288 data/jaffactory/advancements/recipes/building_blocks/orange_planks_slab.json
 97d4e3cfff6d23218ab11ffcf6a7f808f91d64c0 data/jaffactory/advancements/recipes/building_blocks/orange_planks_stairs.json
@@ -16,7 +16,7 @@ c82abc0b1e8f28ca65b5516dec498e67da791eca data/jaffactory/advancements/recipes/re
 5e5f492f883df2a23352f59bf83dad174924f3ac data/jaffactory/advancements/recipes/redstone/orange_planks_fence_gate.json
 2cfdae751f49847e2c2fb5e1845c5e879405e021 data/jaffactory/advancements/recipes/redstone/orange_planks_pressure_plate.json
 eb1471ec19d030b51f9e7fee1eec76c4c61667e9 data/jaffactory/advancements/recipes/redstone/orange_planks_trapdoor.json
-fd377f913853163909af51f6084349f250e4b67d data/jaffactory/recipes/jaffa_base.json
+e0cf01e203ba70fac6b1a6c81fe926e698325684 data/jaffactory/recipes/jaffa_base.json
 f2b380e4ed4c4c560c43b45b936f6bba450711ec data/jaffactory/recipes/jaffa_cake.json
 d7ceec98bca6743a6b4289aa210a18eaa046ec20 data/jaffactory/recipes/jaffa_chocolate.json
 3e2e4dac158bdeb00d33ce8fd5a0a9cf743f87e9 data/jaffactory/recipes/jaffa_slime.json

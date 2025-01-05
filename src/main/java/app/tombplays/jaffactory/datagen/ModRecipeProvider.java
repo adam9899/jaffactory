@@ -35,7 +35,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.WHEAT)
                 .requires(Items.SUGAR)
                 .requires(Items.EGG)
-                .requires(Items.MILK_BUCKET)
                 .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
                 .save(pRecipeOutput);
 
@@ -64,14 +63,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.COCOA_BEANS)
                 .unlockedBy(getHasName(Items.COCOA_BEANS), has(Items.COCOA_BEANS))
                 .save(pRecipeOutput);
-
-
-//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4)
-//                .pattern("o  ")
-//                .pattern("o  ")
-//                .define('o', ModBlocks.ORANGE_PLANKS_BLOCK.get())
-//                .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS_BLOCK.get()), has(ModBlocks.ORANGE_PLANKS_BLOCK.get()))
-//                .save(pRecipeOutput);
+        
 
         /* Get Items from a Block - Category, Item, Block, Count, pRecipeOutput */
         ShapelessGetFromGiveRecipe(RecipeCategory.FOOD, ModItems.ORANGE.get(), ModBlocks.ORANGE_BLOCK.get(), 9, pRecipeOutput);
