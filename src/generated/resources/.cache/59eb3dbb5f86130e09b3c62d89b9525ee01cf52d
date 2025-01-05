@@ -1,7 +1,7 @@
-// 1.20.1	2024-11-03T09:54:19.7481809	Loot Tables
+// 1.20.1	2025-01-05T10:58:08.2839927	Loot Tables
 12f4f5315d034d83ae909498975d17f6b3595db9 data/jaffactory/loot_tables/blocks/orange_block.json
 97c19044dbd237cd83415ab103755cd3fddcffa2 data/jaffactory/loot_tables/blocks/orange_fruit_leaves.json
-2cb82be1473387077f4c91f406cf08e9e25afa86 data/jaffactory/loot_tables/blocks/orange_leaves.json
+aab6ca53980b8121d942a95ddfb640946187b719 data/jaffactory/loot_tables/blocks/orange_leaves.json
 d91b664644c657875e56e07205ce91e05bcc68fb data/jaffactory/loot_tables/blocks/orange_log.json
 28d4d234a7a4e92ef7a82f14e8b9dd330017ad34 data/jaffactory/loot_tables/blocks/orange_planks_block.json
 5b8892029d3871f27e41b691ec4f7a718fbb31cc data/jaffactory/loot_tables/blocks/orange_planks_button.json

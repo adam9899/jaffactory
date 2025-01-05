@@ -29,9 +29,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ORANGE_SAPLING.get());
 
         this.add(ModBlocks.ORANGE_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.ORANGE_SAPLING.get(), 0.3f));
+                createLeavesDrops(block, ModBlocks.ORANGE_SAPLING.get(), 0.2f));
         this.add(ModBlocks.ORANGE_FRUIT_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.ORANGE_SAPLING.get(), 0.1f));
+                createLeavesDrops(block, ModBlocks.ORANGE_SAPLING.get(), 0.05f));
         this.add(ModBlocks.ORANGE_FRUIT_LEAVES.get(),
                 createSingleItemTable(ModItems.ORANGE.get()));
 
