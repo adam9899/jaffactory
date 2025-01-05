@@ -1,0 +1,15 @@
+{
+    "type": "create:mixing",
+    "ingredients": [
+      { "item": "minecraft:sugar" },
+      { "item": "minecraft:wheat" },
+      { "item": "minecraft:egg" }
+    ],
+    "results": [
+      {
+        "item": "jaffactory:jaffa_base",
+        "count": 1
+      }
+    ]
+  }
+  

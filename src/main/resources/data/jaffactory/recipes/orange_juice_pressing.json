@@ -1,0 +1,18 @@
+{
+    "type": "create:compacting",
+    "ingredients": [
+        {
+        "item": "jaffactory:orange"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "jaffactory:orange_juice_fluid",
+            "amount": 50
+        },
+        {
+            "item": "minecraft:orange_dye",
+            "chance": 0.5
+        }
+    ]
+}

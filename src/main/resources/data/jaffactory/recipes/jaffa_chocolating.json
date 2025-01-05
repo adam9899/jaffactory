@@ -1,0 +1,18 @@
+{
+    "type": "create:filling",
+    "ingredients": [
+      {
+        "item": "jaffactory:jaffa_slime_base"
+      },
+      {
+        "fluid": "create:chocolate",
+        "nbt": {},
+        "amount": 25
+      }
+    ],
+    "results": [
+      {
+        "item": "jaffactory:jaffa_cake"
+      }
+    ]
+  }
