@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
   "group": "orange",
   "key": {
     "#": {
@@ -11,11 +11,10 @@
     }
   },
   "pattern": [
-    "W#W",
-    "W#W"
+    "#W#",
+    "#W#"
   ],
   "result": {
-    "count": 3,
     "item": "jaffactory:orange_planks_fence_gate"
   },
   "show_notification": true
