@@ -29,6 +29,18 @@ public class ModFluids {
             .block(ModBlocks.ORANGE_JUICE_BLOCK)
             .bucket(ModItems.ORANGE_JUICE_BUCKET);
 
+    public static final RegistryObject<FlowingFluid> CHOCOLATE_SOURCE = FLUIDS.register("chocolate_fluid",
+            () -> new ForgeFlowingFluid.Source(ModFluids.CHOCOLATE_PROPERTIES));
+
+    public static final RegistryObject<FlowingFluid> CHOCOLATE_FLOWING = FLUIDS.register("chocolate_flowing",
+            () -> new ForgeFlowingFluid.Flowing(ModFluids.CHOCOLATE_PROPERTIES));
+
+    public static final ForgeFlowingFluid.Properties CHOCOLATE_PROPERTIES = new ForgeFlowingFluid.Properties(
+            ModFluidTypes.CHOCOLATE_TYPE, CHOCOLATE_SOURCE, CHOCOLATE_FLOWING)
+            .slopeFindDistance(4).levelDecreasePerBlock(2)
+            .block(ModBlocks.CHOCOLATE_BLOCK)
+            .bucket(ModItems.JAFFA_CHOCOLATE);
+
 
     public static void register(IEventBus eventBus) {
         FLUIDS.register(eventBus);

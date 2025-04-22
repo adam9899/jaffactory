@@ -21,7 +21,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().food((ModFoods.ORANGE_JUICE))));
 
     public static final RegistryObject<Item> ORANGE_JUICE_BUCKET = ITEMS.register("orange_juice_bucket",
-        () -> new BucketItem(ModFluids.ORANGE_JUICE_SOURCE,
+            () -> new BucketItem(ModFluids.ORANGE_JUICE_SOURCE,
                 new Item.Properties()
                 .stacksTo(1)));
 
@@ -29,7 +29,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> JAFFA_CHOCOLATE = ITEMS.register("jaffa_chocolate",
-            () -> new Item(new Item.Properties().food((ModFoods.JAFFA_CHOCOLATE))));
+            () -> new BucketItem(ModFluids.CHOCOLATE_SOURCE,
+                    new Item.Properties()
+                            .stacksTo(1)));
 
     public static final RegistryObject<Item> JAFFA_BASE = ITEMS.register("jaffa_base",
             () -> new Item(new Item.Properties()));

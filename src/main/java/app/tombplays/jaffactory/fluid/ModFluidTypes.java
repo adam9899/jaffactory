@@ -22,6 +22,9 @@ public class ModFluidTypes {
     public static final RegistryObject<FluidType> ORANGE_JUICE_TYPE = register("orange_juice_fluid",
             FluidType.Properties.create().density(15).viscosity(5));
 
+    public static final RegistryObject<FluidType> CHOCOLATE_TYPE = register("chocolate_fluid",
+            FluidType.Properties.create().density(15).viscosity(5));
+
     private static RegistryObject<FluidType> register(String name, FluidType.Properties properties) {
         return FLUID_TYPES.register(name, () -> new BaseFluidType(WATER_STILL_RL, WATER_FLOWING_RL, WATER_OVERLAY_RL, 0xFFFF5C00, properties));
     }

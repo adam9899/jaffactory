@@ -37,6 +37,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_WOOD.get())
                 .add(ModBlocks.STRIPPED_ORANGE_LOG.get())
                 .add(ModBlocks.STRIPPED_ORANGE_WOOD.get());
+
+        this.tag(BlockTags.LEAVES)
+                .add(ModBlocks.ORANGE_LEAVES.get())
+                .add(ModBlocks.ORANGE_FRUIT_LEAVES.get());
+
         this.tag(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.ORANGE_PLANKS_FENCE.get());
         this.tag(BlockTags.WOODEN_DOORS)

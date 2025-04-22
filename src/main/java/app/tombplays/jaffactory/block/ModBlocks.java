@@ -78,6 +78,9 @@ public class ModBlocks {
     public static final RegistryObject<LiquidBlock> ORANGE_JUICE_BLOCK = BLOCKS.register("orange_juice_block",
             () -> new LiquidBlock(ModFluids.ORANGE_JUICE_SOURCE, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
+    public static final RegistryObject<LiquidBlock> CHOCOLATE_BLOCK = BLOCKS.register("chocolate_block",
+            () -> new LiquidBlock(ModFluids.CHOCOLATE_SOURCE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
