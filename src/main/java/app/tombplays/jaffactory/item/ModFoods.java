@@ -17,7 +17,6 @@ public class ModFoods {
             .saturationMod(0.8f).alwaysEat()
                 .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 200, 2), 1f)
                 .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 1200, 2), 1f)
-                .effect(() -> new MobEffectInstance(MobEffects.HEAL, 300, 4), 1f)
             .build();
 
     public static final FoodProperties JAFFA_CHOCOLATE = new FoodProperties.Builder().nutrition(4).fast()
